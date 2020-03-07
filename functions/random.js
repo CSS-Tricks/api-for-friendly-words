@@ -12,6 +12,9 @@ exports.handler = function(event, context, callback) {
   const output = `${randomPredicate}-${randomObject}`;
 
   callback(null, {
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    },
     statusCode: 200,
     body: output
   });
